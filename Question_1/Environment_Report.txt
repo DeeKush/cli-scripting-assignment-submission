@@ -43,11 +43,11 @@ Output:
 total 12
 drwxr-xr-x 2 ubuntu ubuntu 4096 Jun 20 14:30 .
 drwxr-xr-x 7 ubuntu ubuntu 4096 Jun 20 14:25 ..
--rw-r--r-- 1 ubuntu ubuntu 2404 Jun 20 14:25 Environment_Report_macOS_old.txt
+-rw-r--r-- 1 ubuntu ubuntu 2404 Jun 20 14:25 Environment_Report.txt
 
 Observation:
 The ls -la command displayed all files and directories, including hidden entries.
-The Question_1 directory currently contains the previous macOS report file.
+The Question_1 directory contains the report file generated for this section.
 The output also shows that the file is owned by the Ubuntu user and has read and write permissions for the owner.
 
 
