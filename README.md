@@ -1,6 +1,6 @@
 # CLI Scripting Assignment
 
-This repository contains the completed lab assignment for Questions 1 to 5.
+This repository contains my lab assignment work for Questions 1 to 5.
 
 ## Repository Layout
 
@@ -14,4 +14,4 @@ This repository contains the completed lab assignment for Questions 1 to 5.
 
 - Each question folder includes the commands used, the observed output, and brief explanations.
 - Screenshots are stored in the corresponding `screenshot/` folders.
-- The repository is organized for direct review and submission.
+- The repository is arranged for review and submission.
