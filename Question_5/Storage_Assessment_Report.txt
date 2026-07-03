@@ -18,7 +18,7 @@ The lsblk command displayed the available block devices, partitions, sizes, file
 
 The main storage device is sda, which has a total virtual capacity of 20 GB. It contains three partitions. The sda1 partition is a 19 GB ext4 partition mounted as the root filesystem. The sda13 partition is a 923 MB ext4 partition mounted at /boot. The sda15 partition is a 99 MB vfat partition mounted at /boot/efi.
 
-The vda device is a small 54 KB ISO 9660 virtual device. Because the assessment was performed inside a Multipass virtual machine, these devices represent virtual storage rather than the Mac's physical disk.
+The vda device is a small 54 KB ISO 9660 virtual device. Because the assessment was performed inside a virtual machine, these devices represent virtual storage rather than the underlying physical disk.
 
 2. Mounted File Systems
 
@@ -139,29 +139,20 @@ The /boot and /boot/efi partitions are mounted correctly and have low utilizatio
 
 Based on disk-space and inode statistics, no immediate storage-capacity issue was observed.
 
-This assessment was performed inside an Ubuntu Multipass virtual machine. The commands confirm virtual storage capacity, mount status, disk utilization, and inode utilization. They do not confirm the physical SMART health of the Mac's underlying storage device.
+This assessment was performed inside an Ubuntu virtual machine. The commands confirm virtual storage capacity, mount status, disk utilization, and inode utilization. They do not confirm the physical SMART health of the underlying storage device.
 
 7. Recommendations for Improving Storage Utilization
 
-8. Maintain at least 15 to 20 percent free space on important file systems.
-
-9. Monitor disk usage regularly using the df -hT command.
-
-10. Monitor inode usage using df -i, especially for applications that create many small files.
-
-11. Configure log rotation so that application and system logs do not grow without limits.
-
-12. Remove obsolete temporary files, unused application data, cached packages, and old logs.
-
-13. Archive or compress files that are not accessed regularly.
-
-14. Configure monitoring alerts when disk-space or inode usage exceeds a threshold such as 80%.
-
-15. Maintain regular backups of important application files, configuration data, and databases.
-
-16. Review storage growth periodically and increase the virtual disk capacity before deploying storage-intensive workloads.
-
-17. Store application logs, uploaded files, and database data in appropriately sized partitions or external storage when required.
+1. Maintain at least 15 to 20 percent free space on important file systems.
+2. Monitor disk usage regularly using the df -hT command.
+3. Monitor inode usage using df -i, especially for applications that create many small files.
+4. Configure log rotation so that application and system logs do not grow without limits.
+5. Remove obsolete temporary files, unused application data, cached packages, and old logs.
+6. Archive or compress files that are not accessed regularly.
+7. Configure monitoring alerts when disk-space or inode usage exceeds a threshold such as 80%.
+8. Maintain regular backups of important application files, configuration data, and databases.
+9. Review storage growth periodically and increase the virtual disk capacity before deploying storage-intensive workloads.
+10. Store application logs, uploaded files, and database data in appropriately sized partitions or external storage when required.
 
 Conclusion:
 
